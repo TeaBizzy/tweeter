@@ -4,8 +4,22 @@ nav {
   padding-right: 1.5em;
   background-color: #4056a1;
   color: #FFFFFF;
+  display: flex;
+  justify-content: space-between;
 }
 
 span {
   font-family: Bungee;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+i {
+  color: red;
+}
+
+.new-tweet{
+  font-family: Source Sans Pro;
 }
