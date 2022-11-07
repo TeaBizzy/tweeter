@@ -6,6 +6,7 @@ header {
   flex-direction: column;
   align-items: center;
   background-color: darkorange;
+  background-image: url(../images/foggy-birds.png);
 }
 
 h2 {
