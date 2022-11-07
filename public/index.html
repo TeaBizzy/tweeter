@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />    
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />    
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -46,15 +47,14 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
-      <!-- Test Content -->
-      <!-- TODO: Remove These -->
-      <h3>What are you humming about</h3>
-      <hr>
-      <div>
-        <button>tweet</button>
-        <h3>140</h3>
-      </div>
-      <!-- End Test Content -->
+      <h2>Compose Tweet</h2>
+      <form class="new-tweet" action="/" method="POST">
+        <textarea name="text" id="tweet-text">What are you humming about?</textarea>
+        <div class="below-tweet">
+          <button type="submit">Tweet</button>
+          <output name="counter" class="counter" for="tweet-text">140</output>
+        </div>
+      </form>
     </main>
   </body>
 </html>

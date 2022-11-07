@@ -1,0 +1,33 @@
+new-tweet {
+  font-family: Source Sans Pro;
+  color: #545149;
+  width: 100%;
+}
+
+textarea {
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-bottom-width: 4px;
+  border-color: #545149;
+  width: 100%;
+  height: 1.5em;
+  resize: none;
+  color: #545149;
+  font-family: Source Sans Pro;
+  font-weight: bold;
+}
+
+.below-tweet {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 0.5em;
+  font-family: Bungee;
+}
+
+.below-tweet > button {
+  border: 0;
+  padding: 0.2em;
+  color: #FFFFFF;
+  background-color: #4056a1;
+}
