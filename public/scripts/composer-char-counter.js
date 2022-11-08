@@ -1,17 +1,24 @@
 $(document).ready(function() {
-  console.log('ready!')
-
-  const counter = $('.counter');
   const maxCharCount = 140
 
-  $('#tweet-text').on('input', function(event) {
-    console.log(maxCharCount - $(this).val().length);
-    const value = maxCharCount - $(this).val().length;
-    $(counter).text(value);
-    if(value < 0) {
-      $(counter).css('color', 'red');
+  // Get our JQuery elements
+  const tweetForm = $('.new-tweet')
+  const tweetText = tweetForm.find('textarea');
+  const counter = tweetForm.find('.counter');
+
+  tweetText.on('input', (event) => {
+    // Calculate tweet length
+    const tweetLength = event.target.value.length;
+    const remainingLength = maxCharCount - tweetLength;
+
+    // Update counter
+    counter.text(remainingLength);
+    
+    // Update CSS
+    if(remainingLength < 0) {
+      counter.css('color', 'red');
     } else {
-      $(counter).css('color', '#545149');
+      counter.css('color', '#545149');
     }
   });
 });
