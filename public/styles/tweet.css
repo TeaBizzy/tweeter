@@ -8,6 +8,10 @@
   margin-bottom: 1em;
 }
 
+.tweet:hover {
+  box-shadow: 6px 6px lightblue;
+}
+
 .tweet-header {
   display: flex;
   justify-content: space-between;
@@ -35,6 +39,10 @@
   font-size: medium;
   padding-inline: 0.5em;
   color: #4056a1;
+}
+
+.social-button:hover {
+  color: goldenrod;
 }
 
 .tweet-age {
