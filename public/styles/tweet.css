@@ -12,7 +12,7 @@
   box-shadow: 6px 6px lightblue;
 }
 
-.tweet-header {
+.tweet header {
   display: flex;
   justify-content: space-between;
   height: 3em;
@@ -20,7 +20,7 @@
   margin-bottom: 2em;
 }
 
-.tweet-footer {
+.tweet footer {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
@@ -35,26 +35,6 @@
   margin-top: 1em;
 }
 
-.social-button {
-  font-size: medium;
-  padding-inline: 0.5em;
-  color: #4056a1;
-}
-
-.social-button:hover {
-  color: goldenrod;
-}
-
-.tweet-age {
-  font-weight: bold;
-  font-size: small;
-}
-
-.handle {
-  color: lightblue;
-  font-weight: bold;
-}
-
 .left-items {
   display: flex;
   flex-direction: row;
@@ -67,4 +47,24 @@
   flex-direction: row;
   align-items: center;
   height: 100%;
+}
+
+.handle {
+  color: lightblue;
+  font-weight: bold;
+}
+
+.tweet-age{
+  font-weight: bold;
+  font-size: small;
+}
+
+.social-button {
+  font-size: medium;
+  padding-inline: 0.5em;
+  color: #4056a1;
+}
+
+.social-button:hover {
+  color: goldenrod;
 }
