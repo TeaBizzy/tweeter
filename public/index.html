@@ -12,10 +12,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- App CSS -->
+    <link rel="stylesheet" href="/styles/reset.css" type="text/css" />
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />    
-    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />    
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/tweet.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -36,7 +38,7 @@
     </nav>
 
     <!-- Header -->
-    <header>
+    <header id="profile-header">
       <div>
         <img src="/images/profile-hex.png">
       </div>
@@ -56,6 +58,28 @@
           <output name="counter" class="counter" for="tweet-text">140</output>
         </div>
       </form>
+      <article class="tweet">
+        <header class="tweet-header">
+          <div class="left-items">
+            <img src="https://i.imgur.com/nlhLi3I.png">
+            <p>Newton</p>
+          </div>
+          <div class="right-items">
+            <h4 class="handle">@SirIsaac</h4>
+          </div>
+        </header>
+        <h4>This is a tweet!</h4>
+        <footer class="tweet-footer">
+          <div class="left-items">
+            <p class="tweet-age">10 days ago</p>
+          </div>
+          <div class="right-items">
+            <i class="fa-solid fa-flag social-button"></i>
+            <i class="fa-solid fa-retweet social-button"></i>
+            <i class="fa-solid fa-heart social-button"></i>
+          </div>
+        </footer>
+      </article>
     </main>
   </body>
 </html>
