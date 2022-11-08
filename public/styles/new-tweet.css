@@ -31,3 +31,7 @@ textarea {
   color: #FFFFFF;
   background-color: #4056a1;
 }
+
+.counter-red {
+  color: red;
+}

@@ -16,9 +16,9 @@ $(document).ready(function() {
     
     // Update CSS
     if(remainingLength < 0) {
-      counter.css('color', 'red');
+      counter.addClass('counter-red');
     } else {
-      counter.css('color', '#545149');
+      counter.removeClass('counter-red');
     }
   });
 });
