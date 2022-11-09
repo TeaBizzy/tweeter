@@ -75,8 +75,27 @@ const registerEvents = function () {
   $('.new-tweet').submit(function (event) {
     event.preventDefault();
     const text = $(this).serialize()
+
+    const tweetContent = $(this).find('textarea').val().length;
+
+    if(typeof tweetContent !== 'string') {
+      alert('No tweet message!');
+      return;
+    }
+
+    if(tweetContent.length > 140) {
+      alert('Tweet to long!')
+      return;
+    }
+
+    if(tweetContent.length - 5 <= 0) {
+      alert('Tweet is empty!')
+      return;
+    }
+
     $.post('/tweets/', text)
-      .then((data) => {
+      .then(() => {
+        loadTweets();
       })
   });
 }
