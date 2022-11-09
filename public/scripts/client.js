@@ -66,11 +66,11 @@ const createTweetElement = function(tweetData) {
         <i class="fa-solid fa-heart social-button"></i>
       </div>
     </footer>
-  </article>`)
+  </article>`);
   return $tweet;
 };
 
 // Wait for the document to be 'ready'
 $(document).ready(() => {
   renderTweets(data);
-})
+});
