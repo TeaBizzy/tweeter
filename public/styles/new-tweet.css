@@ -25,6 +25,12 @@ textarea {
   font-family: Bungee;
 }
 
+.error {
+  font-family: Source Sans Pro;
+  font-weight: bold;
+  color: red;
+}
+
 .below-tweet > button {
   border: 0;
   padding: 0.2em;

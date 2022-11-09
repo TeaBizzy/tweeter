@@ -50,21 +50,26 @@ const registerEvents = function() {
 
     const tweetContent = $(this).find('textarea').val();
 
+    const errorMessage = $('.error');
     if (typeof tweetContent !== 'string') {
-      alert('No tweet message!');
+      errorMessage.text('No tweet message!');
+      errorMessage.show();
       return;
     }
 
     if (tweetContent.length > 140) {
-      alert('Tweet to long!');
+      errorMessage.text('Tweet too long!');
+      errorMessage.show();
       return;
     }
 
     if (tweetContent.length <= 0) {
-      alert('Tweet is empty!');
+      errorMessage.text('Tweet is empty!');
+      errorMessage.show();
       return;
     }
 
+    errorMessage.hide();
     $.post('/tweets/', text)
       .then(() => {
         loadTweets();
@@ -79,7 +84,6 @@ const loadTweets = function() {
     });
 };
 
-
 const safeInput = function (str) {
   let div = document.createElement("div");
   div.appendChild(document.createTextNode(str));
@@ -88,6 +92,7 @@ const safeInput = function (str) {
 
 // Wait for the document to be 'ready'
 $(document).ready(() => {
+  $('.error').hide();
   registerEvents();
   loadTweets();
 });
