@@ -23,7 +23,8 @@ const data = [
     "user": {
       "name": "Descartes",
       "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd" },
+      "handle": "@rd"
+    },
     "content": {
       "text": "Je pense , donc je suis"
     },
@@ -32,7 +33,7 @@ const data = [
 ];
 
 // Adds all our tweets to the DOM.
-const renderTweets = function(tweets) {
+const renderTweets = function (tweets) {
   tweets.forEach(tweet => {
     // Create HTML with the tweet's data
     const $newTweet = createTweetElement(tweet);
@@ -43,7 +44,7 @@ const renderTweets = function(tweets) {
 };
 
 // Returns a populated jQuery HTML template.
-const createTweetElement = function(tweetData) {
+const createTweetElement = function (tweetData) {
   const $tweet = $(`
   <article class="tweet">
     <header>
@@ -58,7 +59,7 @@ const createTweetElement = function(tweetData) {
     <h4>${tweetData.content.text}</h4>
     <footer>
       <div class="left-items">
-        <p class="tweet-age">${tweetData.created_at}</p>
+        <p class="tweet-age">${timeago.format(tweetData.created_at)}</p>
       </div>
       <div class="right-items">
         <i class="fa-solid fa-flag social-button"></i>
@@ -70,28 +71,21 @@ const createTweetElement = function(tweetData) {
   return $tweet;
 };
 
-const registerEvents = function() {
-  $('.new-tweet').submit(function(event) {
+const registerEvents = function () {
+  $('.new-tweet').submit(function (event) {
     event.preventDefault();
     const text = $(this).serialize()
-    $.ajax({
-      type: 'POST',
-      url: '/tweets/',
-      data: text,
-    })
-    .then((data) => {
-    })
+    $.post('/tweets/', text)
+      .then((data) => {
+      })
   });
 }
 
-const loadTweets = function() {
-  $.ajax({
-    type: 'GET',
-    url: '/tweets/'
-  })
-  .then((data) => {
-    renderTweets(data)
-  })
+const loadTweets = function () {
+  $.get('/tweets/')
+    .then((data) => {
+      renderTweets(data)
+    })
 };
 
 // Wait for the document to be 'ready'
