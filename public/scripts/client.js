@@ -76,7 +76,7 @@ const registerEvents = function () {
     event.preventDefault();
     const text = $(this).serialize()
 
-    const tweetContent = $(this).find('textarea').val().length;
+    const tweetContent = $(this).find('textarea').val();
 
     if(typeof tweetContent !== 'string') {
       alert('No tweet message!');
@@ -88,7 +88,7 @@ const registerEvents = function () {
       return;
     }
 
-    if(tweetContent.length - 5 <= 0) {
+    if(tweetContent.length <= 0) {
       alert('Tweet is empty!')
       return;
     }
