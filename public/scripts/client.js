@@ -6,18 +6,43 @@
 
 // Test code
 // TODO: Remove this
-const tweet = {
-  "user": {
-    "name": "Newton",
-    "avatars": "https://i.imgur.com/73hZDYK.png",
-    "handle": "@SirIsaac"
+const data = [
+  {
+    "user": {
+      "name": "Newton",
+      "avatars": "https://i.imgur.com/73hZDYK.png"
+      ,
+      "handle": "@SirIsaac"
     },
-  "content": {
+    "content": {
       "text": "If I have seen further it is by standing on the shoulders of giants"
     },
-  "created_at": 1461116232227
-}
+    "created_at": 1461116232227
+  },
+  {
+    "user": {
+      "name": "Descartes",
+      "avatars": "https://i.imgur.com/nlhLi3I.png",
+      "handle": "@rd" },
+    "content": {
+      "text": "Je pense , donc je suis"
+    },
+    "created_at": 1461113959088
+  }
+];
 
+// Adds all our tweets to the DOM.
+const renderTweets = function(tweets) {
+  tweets.forEach(tweet => {
+    // Create HTML with the tweet's data
+    const $newTweet = createTweetElement(tweet);
+
+    // Insert the HTML into the document
+    $('main').append($newTweet);
+  });
+};
+
+// Returns a populated jQuery HTML template.
 const createTweetElement = function(tweetData) {
   const $tweet = $(`
   <article class="tweet">
@@ -45,11 +70,7 @@ const createTweetElement = function(tweetData) {
   return $tweet;
 };
 
-// Test code
-// TODO: Remove
-const $tweet = createTweetElement(tweet);
-console.log($tweet);
-
+// Wait for the document to be 'ready'
 $(document).ready(() => {
-  $('main').append($tweet);
+  renderTweets(data);
 })
