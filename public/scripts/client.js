@@ -4,34 +4,6 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-// Test code
-// TODO: Remove this
-const data = [
-  {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png"
-      ,
-      "handle": "@SirIsaac"
-    },
-    "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-    "created_at": 1461116232227
-  },
-  {
-    "user": {
-      "name": "Descartes",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd"
-    },
-    "content": {
-      "text": "Je pense , donc je suis"
-    },
-    "created_at": 1461113959088
-  }
-];
-
 // Adds all our tweets to the DOM.
 const renderTweets = function(tweets) {
   tweets.forEach(tweet => {
@@ -56,7 +28,7 @@ const createTweetElement = function(tweetData) {
         <h4 class="handle">${tweetData.user.handle}</h4>
       </div>
     </header>
-    <h4>${tweetData.content.text}</h4>
+    <h4>${safeInput(tweetData.content.text)}</h4>
     <footer>
       <div class="left-items">
         <p class="tweet-age">${timeago.format(tweetData.created_at)}</p>
@@ -105,6 +77,13 @@ const loadTweets = function() {
     .then((data) => {
       renderTweets(data);
     });
+};
+
+
+const safeInput = function (str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
 };
 
 // Wait for the document to be 'ready'
