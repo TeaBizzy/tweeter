@@ -70,7 +70,32 @@ const createTweetElement = function(tweetData) {
   return $tweet;
 };
 
+const registerEvents = function() {
+  $('.new-tweet').submit(function(event) {
+    event.preventDefault();
+    const text = $(this).serialize()
+    $.ajax({
+      type: 'POST',
+      url: '/tweets/',
+      data: text,
+    })
+    .then((data) => {
+    })
+  });
+}
+
+const loadTweets = function() {
+  $.ajax({
+    type: 'GET',
+    url: '/tweets/'
+  })
+  .then((data) => {
+    renderTweets(data)
+  })
+};
+
 // Wait for the document to be 'ready'
 $(document).ready(() => {
-  renderTweets(data);
+  registerEvents()
+  loadTweets();
 });
