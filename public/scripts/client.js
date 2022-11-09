@@ -33,7 +33,7 @@ const data = [
 ];
 
 // Adds all our tweets to the DOM.
-const renderTweets = function (tweets) {
+const renderTweets = function(tweets) {
   tweets.forEach(tweet => {
     // Create HTML with the tweet's data
     const $newTweet = createTweetElement(tweet);
@@ -44,7 +44,7 @@ const renderTweets = function (tweets) {
 };
 
 // Returns a populated jQuery HTML template.
-const createTweetElement = function (tweetData) {
+const createTweetElement = function(tweetData) {
   const $tweet = $(`
   <article class="tweet">
     <header>
@@ -71,44 +71,44 @@ const createTweetElement = function (tweetData) {
   return $tweet;
 };
 
-const registerEvents = function () {
-  $('.new-tweet').submit(function (event) {
+const registerEvents = function() {
+  $('.new-tweet').submit(function(event) {
     event.preventDefault();
-    const text = $(this).serialize()
+    const text = $(this).serialize();
 
     const tweetContent = $(this).find('textarea').val();
 
-    if(typeof tweetContent !== 'string') {
+    if (typeof tweetContent !== 'string') {
       alert('No tweet message!');
       return;
     }
 
-    if(tweetContent.length > 140) {
-      alert('Tweet to long!')
+    if (tweetContent.length > 140) {
+      alert('Tweet to long!');
       return;
     }
 
-    if(tweetContent.length <= 0) {
-      alert('Tweet is empty!')
+    if (tweetContent.length <= 0) {
+      alert('Tweet is empty!');
       return;
     }
 
     $.post('/tweets/', text)
       .then(() => {
         loadTweets();
-      })
+      });
   });
-}
+};
 
-const loadTweets = function () {
+const loadTweets = function() {
   $.get('/tweets/')
     .then((data) => {
-      renderTweets(data)
-    })
+      renderTweets(data);
+    });
 };
 
 // Wait for the document to be 'ready'
 $(document).ready(() => {
-  registerEvents()
+  registerEvents();
   loadTweets();
 });
