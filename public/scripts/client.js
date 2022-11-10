@@ -79,10 +79,10 @@ const registerEvents = function() {
     }
     
     errorMessage.hide();
+    textarea.val('');
     $.post('/tweets/', text)
     .then(() => {
       loadTweets();
-      textarea.val('');
     });
   });
 };
