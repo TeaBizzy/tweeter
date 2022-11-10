@@ -53,6 +53,11 @@ main div h3 {
   margin: 0%;
 }
 
+#tweet-container {
+  display: flex;
+  flex-direction: column;
+}
+
 @media only screen and (min-width: 768px) {
   body {
     flex-direction: row;

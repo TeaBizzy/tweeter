@@ -7,12 +7,15 @@
 // Adds all our tweets to the DOM.
 // TODO: Reverse the render order.
 const renderTweets = function(tweets) {
+  const tweetContainer = $('#tweet-container');
+  tweetContainer.empty();
+  tweets.reverse()
   tweets.forEach(tweet => {
     // Create HTML with the tweet's data
     const $newTweet = createTweetElement(tweet);
 
     // Insert the HTML into the document
-    $('main').append($newTweet);
+    tweetContainer.append($newTweet);
   });
 };
 
