@@ -56,8 +56,8 @@ const registerEvents = function() {
   $('.new-tweet').submit(function(event) {
     event.preventDefault();
     const text = $(this).serialize();
-
-    const tweetContent = $(this).find('textarea').val();
+    const textarea = $(this).find('textarea');
+    const tweetContent = textarea.val();
 
     const errorMessage = $('.error');
     if (typeof tweetContent !== 'string') {
@@ -77,12 +77,13 @@ const registerEvents = function() {
       errorMessage.show();
       return;
     }
-
+    
     errorMessage.hide();
     $.post('/tweets/', text)
-      .then(() => {
-        loadTweets();
-      });
+    .then(() => {
+      loadTweets();
+      textarea.val('');
+    });
   });
 };
 
