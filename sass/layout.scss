@@ -1,0 +1,82 @@
+/*
+ * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ * https://css-tricks.com/international-box-sizing-awareness-day/
+ * Do not modify these two selectors, please
+ */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+  background-color: inherit;
+}
+
+/*
+ * Global layout stuff
+ */
+
+/*
+  Variables
+*/
+$primary-font: Source Sans Pro, sans-serif;
+$secondary-font: Bungee, sans-serif;
+
+$primary-bg-color: #4056a1;
+$secondary-bg-color: #FFFFFF;
+$primary-text-color: #545149;
+$secondary-text-color: #FFFFFF;
+
+body {
+  color: $primary-text-color;
+  background-color: $secondary-bg-color;
+  font-size: 24px;
+  font-family: $primary-font;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*
+ * Additional CSS can be defined below or in other CSS files, as per instructions
+ */
+
+ main {
+  width: 90%;
+  hr {
+    margin-top: 0.5em;
+  }
+
+  h3 {
+    margin-block: 0.5em;
+  }
+
+  div {
+    display:flex;
+    justify-content: space-between;
+
+    button {
+      color: $secondary-text-color;
+      background-color: $primary-bg-color;
+      font-family: $secondary-font;
+    }
+
+    h3 {
+      margin: 0%;
+    }
+  }
+ }
+
+ @media only screen and (min-width: 768px) {
+  
+  body {
+    flex-direction: row;
+    align-items: start;
+  }
+  
+  main {
+      width: 67.7%;
+      float: right;
+      padding-top: 120px;
+      padding-inline: 3em;
+    }
+ }

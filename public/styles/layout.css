@@ -6,6 +6,7 @@
 html {
   box-sizing: border-box;
 }
+
 *, *:before, *:after {
   box-sizing: inherit;
   background-color: inherit;
@@ -14,10 +15,12 @@ html {
 /*
  * Global layout stuff
  */
-
+/*
+  Variables
+*/
 body {
   color: #545149;
-  background-color: #f4f1ec;
+  background-color: #FFFFFF;
   font-size: 24px;
   font-family: Source Sans Pro, sans-serif;
   display: flex;
@@ -28,49 +31,37 @@ body {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
-
- main {
+main {
   width: 90%;
- }
-
- /* 
-  Test Styles
-  TODO: Remove these
- */
- main > hr {
+}
+main hr {
   margin-top: 0.5em;
- }
-
- main > h3 {
+}
+main h3 {
   margin-block: 0.5em;
- }
-
- main > div {
-  display:flex;
+}
+main div {
+  display: flex;
   justify-content: space-between;
- }
-
- main > div > button {
-  color: white;
+}
+main div button {
+  color: #FFFFFF;
   background-color: #4056a1;
-  font-family: Bungee;
- }
-
- main > div > h3 {
+  font-family: Bungee, sans-serif;
+}
+main div h3 {
   margin: 0%;
- }
+}
 
- @media only screen and (min-width: 768px) {
-  
+@media only screen and (min-width: 768px) {
   body {
     flex-direction: row;
     align-items: start;
   }
-  
   main {
-      width: 67.7%;
-      float: right;
-      padding-top: 120px;
-      padding-inline: 3em;
-    }
- }
+    width: 67.7%;
+    float: right;
+    padding-top: 120px;
+    padding-inline: 3em;
+  }
+}
