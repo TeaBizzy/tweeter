@@ -1,3 +1,6 @@
+/*
+  Variables
+*/
 .tweet {
   display: flex;
   flex-direction: column;
@@ -35,6 +38,9 @@
   margin-top: 1em;
 }
 
+/*
+  TODO: Refactor left-items, and right-items together.
+*/
 .left-items {
   display: flex;
   flex-direction: row;

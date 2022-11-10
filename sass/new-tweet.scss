@@ -1,6 +1,8 @@
+@use 'constants';
+
 new-tweet {
   font-family: Source Sans Pro;
-  color: #545149;
+  color: constants.$tweeter-gray;
   width: 100%;
 }
 
@@ -9,12 +11,12 @@ textarea {
   border-left: 0px;
   border-right: 0px;
   border-bottom-width: 4px;
-  border-color: #545149;
+  border-color: constants.$tweeter-gray;
   width: 100%;
   height: 1.5em;
   resize: none;
-  color: #545149;
-  font-family: Source Sans Pro;
+  color: constants.$tweeter-gray;
+  font-family: constants.$font-source-sans-pro;
   font-weight: bold;
 }
 
@@ -22,22 +24,22 @@ textarea {
   display: flex;
   justify-content: space-between;
   padding-top: 0.5em;
-  font-family: Bungee;
+  font-family: constants.$font-bungee;
 }
 
 .error {
-  font-family: Source Sans Pro;
+  font-family: constants.$font-source-sans-pro;
   font-weight: bold;
-  color: red;
+  color: constants.$error-color;
 }
 
 .below-tweet > button {
   border: 0;
   padding: 0.2em;
-  color: #FFFFFF;
-  background-color: #4056a1;
+  color: constants.$tweeter-white;
+  background-color: constants.$tweeter-blue;
 }
 
 .counter-red {
-  color: red;
+  color: constants.$error-color;
 }

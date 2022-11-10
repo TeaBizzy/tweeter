@@ -1,3 +1,5 @@
+@use 'constants';
+
 .tweet {
   display: flex;
   flex-direction: column;
@@ -9,7 +11,7 @@
 }
 
 .tweet:hover {
-  box-shadow: 6px 6px lightblue;
+  box-shadow: 6px 6px constants.$tweeter-handle-blue;
 }
 
 .tweet header {
@@ -35,6 +37,9 @@
   margin-top: 1em;
 }
 
+/*
+  TODO: Refactor left-items, and right-items together.
+*/
 .left-items {
   display: flex;
   flex-direction: row;
@@ -50,7 +55,7 @@
 }
 
 .handle {
-  color: lightblue;
+  color: constants.$tweeter-handle-blue;
   font-weight: bold;
 }
 
@@ -62,9 +67,9 @@
 .social-button {
   font-size: medium;
   padding-inline: 0.5em;
-  color: #4056a1;
+  color: constants.$tweeter-blue;
 }
 
 .social-button:hover {
-  color: goldenrod;
+  color: constants.$social-hover-color;
 }

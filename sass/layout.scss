@@ -18,19 +18,20 @@ html {
 /*
   Variables
 */
-$primary-font: Source Sans Pro, sans-serif;
-$secondary-font: Bungee, sans-serif;
+$font-source-sans-pro: Source Sans Pro, sans-serif;
+$font-bungee: Bungee, sans-serif;
 
-$primary-bg-color: #4056a1;
-$secondary-bg-color: #FFFFFF;
-$primary-text-color: #545149;
-$secondary-text-color: #FFFFFF;
+$tweeter-blue: #4056a1;
+$tweeter-handle-blue: lightblue;
+$tweeter-white: #FFFFFF;
+$tweeter-gray: #545149;
+$error-color: red;
 
 body {
-  color: $primary-text-color;
-  background-color: $secondary-bg-color;
+  color: $tweeter-gray;
+  background-color: $tweeter-white;
   font-size: 24px;
-  font-family: $primary-font;
+  font-family: $font-source-sans-pro;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -55,9 +56,9 @@ body {
     justify-content: space-between;
 
     button {
-      color: $secondary-text-color;
-      background-color: $primary-bg-color;
-      font-family: $secondary-font;
+      color: $tweeter-white;
+      background-color: $tweeter-blue;
+      font-family: $font-bungee;
     }
 
     h3 {

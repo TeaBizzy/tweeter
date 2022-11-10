@@ -1,17 +1,19 @@
+@use 'constants';
+
 nav {
   height: 120px;
   width: 100%;
   padding-left: 1.5em;
   padding-right: 1.5em;
-  background-color: #4056a1;
-  color: #FFFFFF;
+  background-color: constants.$tweeter-blue;
+  color: constants.$tweeter-white;
   display: flex;
   justify-content: space-between;
   position: fixed;
 }
 
 span {
-  font-family: Bungee;
+  font-family: constants.$font-bungee;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -19,9 +21,9 @@ span {
 }
 
 i {
-  color: red;
+  color: constants.$error-color;
 }
 
 .new-tweet{
-  font-family: Source Sans Pro;
+  font-family: constants.$font-source-sans-pro;
 }

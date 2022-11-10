@@ -1,3 +1,6 @@
+/*
+  Variables
+*/
 nav {
   height: 120px;
   width: 100%;
@@ -11,7 +14,7 @@ nav {
 }
 
 span {
-  font-family: Bungee;
+  font-family: Bungee, sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -23,5 +26,5 @@ i {
 }
 
 .new-tweet {
-  font-family: Source Sans Pro;
+  font-family: Source Sans Pro, sans-serif;
 }

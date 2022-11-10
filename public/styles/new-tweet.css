@@ -1,3 +1,6 @@
+/*
+  Variables
+*/
 new-tweet {
   font-family: Source Sans Pro;
   color: #545149;
@@ -14,7 +17,7 @@ textarea {
   height: 1.5em;
   resize: none;
   color: #545149;
-  font-family: Source Sans Pro;
+  font-family: Source Sans Pro, sans-serif;
   font-weight: bold;
 }
 
@@ -22,11 +25,11 @@ textarea {
   display: flex;
   justify-content: space-between;
   padding-top: 0.5em;
-  font-family: Bungee;
+  font-family: Bungee, sans-serif;
 }
 
 .error {
-  font-family: Source Sans Pro;
+  font-family: Source Sans Pro, sans-serif;
   font-weight: bold;
   color: red;
 }
