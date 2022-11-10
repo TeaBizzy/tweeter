@@ -10,20 +10,23 @@ nav {
   display: flex;
   justify-content: space-between;
   position: fixed;
-}
+  
+  #logo {
+    font-family: constants.$font-bungee;
+  }
 
-span {
-  font-family: constants.$font-bungee;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 
-i {
-  color: constants.$error-color;
-}
+  .new-tweet-button {
+    font-weight: bold;
+  }
 
-.new-tweet{
-  font-family: constants.$font-source-sans-pro;
+  i {
+    color: constants.$error-color;
+  }
 }

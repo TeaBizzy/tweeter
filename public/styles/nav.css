@@ -12,19 +12,18 @@ nav {
   justify-content: space-between;
   position: fixed;
 }
-
-span {
+nav #logo {
   font-family: Bungee, sans-serif;
+}
+nav div {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-
-i {
-  color: red;
+nav .new-tweet-button {
+  font-weight: bold;
 }
-
-.new-tweet {
-  font-family: Source Sans Pro, sans-serif;
+nav i {
+  color: red;
 }
