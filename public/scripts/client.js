@@ -53,8 +53,9 @@ const registerEvents = function() {
   // Focuses and empties the tweet area
   $('.new-tweet-button').on('click', () => {
     const tweetBox = $('.new-tweet').find('textarea');
+    const tweetForm = $('.new-tweet');
+    tweetForm.animate({height: "toggle"}, 500);
     tweetBox.focus();
-    $('html').scrollTop(0);
   })
 
   $('.new-tweet').submit(function(event) {
