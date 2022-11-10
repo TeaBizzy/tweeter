@@ -34,6 +34,7 @@ body {
 main {
   width: 90%;
   margin-top: 180px;
+  margin-bottom: 6rem;
 }
 main hr {
   margin-top: 0.5em;
@@ -69,4 +70,18 @@ main div h3 {
     float: right;
     padding-inline: 3em;
   }
+}
+#to-top-button {
+  border-radius: 50%;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 5rem;
+  height: 5rem;
+  background-color: red;
+  margin: 1em;
+}
+#to-top-button i {
+  font-size: 36px;
+  color: white;
 }

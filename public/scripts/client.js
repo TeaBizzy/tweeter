@@ -91,6 +91,18 @@ const registerEvents = function() {
       loadTweets();
     });
   });
+
+  $(window).scroll(() => {
+    if($('html').scrollTop() > 0) {
+      $('#to-top-button').show();
+    } else {
+      $('#to-top-button').hide();
+    }
+  });
+
+  $('#to-top-button').on('click', () => {
+    $('html').scrollTop(0);
+  })
 };
 
 const loadTweets = function() {
@@ -111,4 +123,5 @@ $(document).ready(() => {
   $('.error').hide();
   registerEvents();
   loadTweets();
+  $('#to-top-button').hide();
 });
