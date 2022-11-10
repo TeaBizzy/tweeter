@@ -81,6 +81,7 @@ const registerEvents = function() {
       return;
     }
     
+    $(this).trigger('success');
     errorMessage.hide();
     textarea.val('');
     $.post('/tweets/', text)

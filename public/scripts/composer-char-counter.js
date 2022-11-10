@@ -9,13 +9,13 @@ $(document).ready(() => {
 
   // _______________________________________________________________________ //
   // *-------------------------- Register Events --------------------------* //
-  
+
   tweetText.on('input', (event) => {
     const tweetLength = event.target.value.length;
     updateCounter(tweetLength, counter);
   });
 
-  tweetForm.submit(() => updateCounter(0, counter));
+  tweetForm.on('success', () => updateCounter(0, counter));
 
   // _______________________________________________________________________ //
   // *----------------------------- Functions -----------------------------* //
