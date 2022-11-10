@@ -54,6 +54,7 @@ const registerEvents = function() {
   $('.new-tweet-button').on('click', () => {
     const tweetBox = $('.new-tweet').find('textarea');
     tweetBox.focus();
+    $('html').scrollTop(0);
   })
 
   $('.new-tweet').submit(function(event) {
