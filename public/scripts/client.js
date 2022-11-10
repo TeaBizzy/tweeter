@@ -5,6 +5,7 @@
  */
 
 // Adds all our tweets to the DOM.
+// TODO: Reverse the render order.
 const renderTweets = function(tweets) {
   tweets.forEach(tweet => {
     // Create HTML with the tweet's data
