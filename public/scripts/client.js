@@ -48,12 +48,10 @@ const createTweetElement = function(tweetData) {
 // TODO: Refactor the callbacks into functions
 const registerEvents = function() {
   // Focuses and empties the tweet area
-  $('.new-tweet-button').on('click', function(event) {
+  $('.new-tweet-button').on('click', () => {
     const tweetBox = $('.new-tweet').find('textarea');
     tweetBox.focus();
-    tweetBox.val('');
   })
-
 
   $('.new-tweet').submit(function(event) {
     event.preventDefault();
