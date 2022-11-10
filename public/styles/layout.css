@@ -59,3 +59,18 @@ body {
  main > div > h3 {
   margin: 0%;
  }
+
+ @media only screen and (min-width: 768px) {
+  
+  body {
+    flex-direction: row;
+    align-items: start;
+  }
+  
+  main {
+      width: 67.7%;
+      float: right;
+      padding-top: 120px;
+      padding-inline: 3em;
+    }
+ }
