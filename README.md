@@ -16,7 +16,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-![Tweeter](public/images/documentation/tweeter-example.png)
+![Tweeter](docs/tweeter-example.png)
 
 ---
 ### Built With
@@ -66,11 +66,11 @@
 ### Compose Tweet
 * Compose a tweet of 1-140 characters long, and click 'tweet' to submit!
 
-  ![Tweeter](public/images/documentation/new-tweet.png)
+  ![Tweeter](docs/new-tweet.png)
 
 * If a tweet is invalid an error will appear.
 
-  ![Tweeter](public/images/documentation/invalid-tweet.png)
+  ![Tweeter](docs/invalid-tweet.png)
 
 ---
 
@@ -78,7 +78,7 @@
 
 * This button on the right side of the nav bar will toggle the new tweet form.
 
-  ![Tweeter](public/images/documentation/toggle-new-tweet.png)
+  ![Tweeter](docs/toggle-new-tweet.png)
 
 ---
 
@@ -86,7 +86,7 @@
 
 * After scrolling away from the top of the page, this button will appear on the bottom right.
 
-  ![Tweeter](public/images/documentation/return-to-top.png)
+  ![Tweeter](docs/return-to-top.png)
 
 * Clicking this will send you back to the top of the page.
 
