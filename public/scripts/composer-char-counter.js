@@ -1,39 +1,24 @@
-$(document).ready(() => {
-  // _________________________________________________________________________ //
-  // *-------------------------- Declare Varaibles --------------------------* //
+// _______________________________________________________________________ //
+// *----------------------------- Constants -----------------------------* //
 
-  const tweetForm = $('.new-tweet');
-  const tweetText = tweetForm.find('textarea');
-  const counter = tweetForm.find('.counter');
+const counter = $('.new-tweet').find('.counter');
 
 
-  // _______________________________________________________________________ //
-  // *-------------------------- Register Events --------------------------* //
+// _______________________________________________________________________ //
+// *----------------------------- Functions -----------------------------* //
 
-  tweetText.on('input', (event) => {
-    const tweetLength = event.target.value.length;
-    updateCounter(tweetLength);
-  });
+// Updates the text of the counter to show the remaining string length
+const updateCounter = function(length = 0) {
+  const maxCharCount = 140;
+  const remainingLength = maxCharCount - length;
 
-  tweetForm.on('success', () => updateCounter());
+  // Update counter
+  counter.text(remainingLength);
 
-  
-  // _______________________________________________________________________ //
-  // *----------------------------- Functions -----------------------------* //
-
-  // Updates the text of the counter to show the remaining string length
-  const updateCounter = function(length = 0) {
-    const maxCharCount = 140;
-    const remainingLength = maxCharCount - length;
-
-    // Update counter
-    counter.text(remainingLength);
-
-    // Update CSS
-    if (remainingLength < 0) {
-      counter.addClass('counter-red');
-    } else {
-      counter.removeClass('counter-red');
-    }
-  };
-});
+  // Update CSS
+  if (remainingLength < 0) {
+    counter.addClass('counter-red');
+  } else {
+    counter.removeClass('counter-red');
+  }
+};
