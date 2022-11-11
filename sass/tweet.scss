@@ -5,69 +5,54 @@
   flex-direction: column;
   border-width: 4px;
   border-style: solid;
-  padding: 1em;
-  margin-top: 1em;
-  margin-bottom: 1em;
+  padding: 1rem;
+  margin-top: 2rem;
+  overflow-wrap: break-word;
+
+  div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    height: 3rem;
+    flex-direction: row;
+    margin-bottom: 2rem;
+  }
+
+  footer {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: flex-end;
+    height: 2rem;
+    border-top: 4px solid constants.$tweeter-gray;
+    padding-block: 0.5rem;
+    margin-top: 1rem;
+  }
 }
 
 .tweet:hover {
   box-shadow: 6px 6px constants.$tweeter-handle-blue;
 }
 
-.tweet header {
-  display: flex;
-  justify-content: space-between;
-  height: 3em;
-  flex-direction: row;
-  margin-bottom: 2em;
-}
-
-.tweet footer {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-  align-items: flex-end;
-  height: 2em;
-  border-top: 4px;
-  border-left: 0;
-  border-right: 0;
-  border-bottom: 0;
-  border-style: solid;
-  padding-block: 0.5em;
-  margin-top: 1em;
-}
-
-/*
-  TODO: Refactor left-items, and right-items together.
-  TODO: Make long tweets wrap.
-*/
-.left-items {
-  display: flex;
-  flex-direction: row;
-  height: 100%;
-  align-items: center;
-}
-
-.right-items {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  height: 100%;
-}
-
 .handle {
   color: constants.$tweeter-handle-blue;
+  font-size: 1rem;
   font-weight: bold;
 }
 
 .tweet-age{
   font-weight: bold;
-  font-size: small;
+  font-size: 0.75rem;
 }
 
 .social-button {
-  font-size: medium;
-  padding-inline: 0.5em;
+  font-size: 1rem;
+  padding-inline: 0.5rem;
   color: constants.$tweeter-blue;
 }
 

@@ -1,19 +1,13 @@
-/*
-  Variables
-*/
 nav {
   height: 120px;
   width: 100%;
-  padding-left: 1.5em;
-  padding-right: 1.5em;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
   background-color: #4056a1;
   color: #FFFFFF;
   display: flex;
   justify-content: space-between;
   position: fixed;
-}
-nav #logo {
-  font-family: Bungee, sans-serif;
 }
 nav div {
   display: flex;
@@ -21,9 +15,15 @@ nav div {
   justify-content: center;
   align-items: center;
 }
-nav .new-tweet-button {
-  font-weight: bold;
-}
 nav i {
-  color: red;
+  color: lightblue;
+}
+
+.new-tweet-button {
+  font-weight: bold;
+  padding-left: 0.5rem;
+}
+
+#logo {
+  font-family: Bungee, sans-serif;
 }

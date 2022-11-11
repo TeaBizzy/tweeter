@@ -13,10 +13,7 @@ html {
 }
 
 /*
- * Global layout stuff
- */
-/*
-  Variables
+  Sass Variables
 */
 body {
   color: #545149;
@@ -28,31 +25,30 @@ body {
   align-items: center;
 }
 
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
 main {
-  width: 90%;
-  margin-top: 180px;
+  width: 100%;
+  padding: 2rem;
   margin-bottom: 6rem;
 }
-main hr {
-  margin-top: 0.5em;
-}
-main h3 {
-  margin-block: 0.5em;
-}
-main div {
-  display: flex;
-  justify-content: space-between;
-}
-main div button {
-  color: #FFFFFF;
+
+#to-top-button {
+  border-radius: 50%;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 5rem;
+  height: 5rem;
   background-color: #4056a1;
-  font-family: Bungee, sans-serif;
+  border: 0;
+  margin: 1em;
 }
-main div h3 {
-  margin: 0%;
+#to-top-button i {
+  font-size: 36px;
+  color: white;
+}
+
+#to-top-button:hover {
+  background-color: lightblue;
 }
 
 #tweet-container {
@@ -69,19 +65,6 @@ main div h3 {
     width: 67.7%;
     float: right;
     padding-inline: 3em;
+    padding-top: 180px;
   }
-}
-#to-top-button {
-  border-radius: 50%;
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  width: 5rem;
-  height: 5rem;
-  background-color: red;
-  margin: 1em;
-}
-#to-top-button i {
-  font-size: 36px;
-  color: white;
 }

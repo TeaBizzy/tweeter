@@ -3,18 +3,15 @@
 nav {
   height: 120px;
   width: 100%;
-  padding-left: 1.5em;
-  padding-right: 1.5em;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
   background-color: constants.$tweeter-blue;
   color: constants.$tweeter-white;
   display: flex;
   justify-content: space-between;
   position: fixed;
   
-  #logo {
-    font-family: constants.$font-bungee;
-  }
-
+  
   div {
     display: flex;
     flex-direction: column;
@@ -22,11 +19,16 @@ nav {
     align-items: center;
   }
 
-  .new-tweet-button {
-    font-weight: bold;
-  }
-
   i {
-    color: constants.$error-color;
+    color: constants.$tweeter-handle-blue;
   }
+}
+
+.new-tweet-button {
+  font-weight: bold;
+  padding-left: 0.5rem;
+}
+
+#logo {
+  font-family: constants.$font-bungee;
 }

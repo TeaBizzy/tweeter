@@ -12,11 +12,7 @@ html {
 }
 
 /*
- * Global layout stuff
- */
-
-/*
-  Variables
+  Sass Variables
 */
 $font-source-sans-pro: Source Sans Pro, sans-serif;
 $font-bungee: Bungee, sans-serif;
@@ -37,70 +33,49 @@ body {
   align-items: center;
 }
 
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
-
- main {
-  width: 90%;
-  margin-top: 180px;
+main {
+  width: 100%;
+  padding: 2rem;
   margin-bottom: 6rem;
-  hr {
-    margin-top: 0.5em;
-  }
+}
 
-  h3 {
-    margin-block: 0.5em;
-  }
-
-  div {
-    display:flex;
-    justify-content: space-between;
-
-    button {
-      color: $tweeter-white;
-      background-color: $tweeter-blue;
-      font-family: $font-bungee;
-    }
-
-    h3 {
-      margin: 0%;
-    }
-  }
- }
-
- 
- #tweet-container {
-  display: flex;
-  flex-direction: column;
- }
-
- @media only screen and (min-width: 768px) {
-  
-  body {
-    flex-direction: row;
-    align-items: start;
-  }
-  
-  main {
-      width: 67.7%;
-      float: right;
-      padding-inline: 3em;
-    }
- }
-
- #to-top-button {
+#to-top-button {
   border-radius: 50%;
   position: fixed;
   right: 0;
   bottom: 0;
   width: 5rem;
   height: 5rem;
-  background-color: red;
+  background-color: $tweeter-blue;
+  border: 0;
   margin: 1em;
 
   i {
     font-size: 36px;
     color: white;
   }
- }
+}
+
+#to-top-button:hover {
+  background-color: $tweeter-handle-blue;
+}
+
+#tweet-container {
+  display: flex;
+  flex-direction: column;
+}
+
+@media only screen and (min-width: 768px) {
+
+body {
+  flex-direction: row;
+  align-items: start;
+}
+
+main {
+    width: 67.7%;
+    float: right;
+    padding-inline: 3em;
+    padding-top: 180px;
+  }
+}
