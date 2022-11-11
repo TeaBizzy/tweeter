@@ -12,16 +12,17 @@ $(document).ready(() => {
 
   tweetText.on('input', (event) => {
     const tweetLength = event.target.value.length;
-    updateCounter(tweetLength, counter);
+    updateCounter(tweetLength);
   });
 
-  tweetForm.on('success', () => updateCounter(0, counter));
+  tweetForm.on('success', () => updateCounter());
 
+  
   // _______________________________________________________________________ //
   // *----------------------------- Functions -----------------------------* //
 
   // Updates the text of the counter to show the remaining string length
-  const updateCounter = function(length, counter) {
+  const updateCounter = function(length = 0) {
     const maxCharCount = 140;
     const remainingLength = maxCharCount - length;
 
@@ -29,10 +30,10 @@ $(document).ready(() => {
     counter.text(remainingLength);
 
     // Update CSS
-    if(remainingLength < 0) {
+    if (remainingLength < 0) {
       counter.addClass('counter-red');
     } else {
       counter.removeClass('counter-red');
     }
-  }
+  };
 });
