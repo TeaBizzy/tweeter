@@ -1,5 +1,16 @@
-// _________________________________________________________________________ //
-// *------------------------------ Functions ------------------------------* //
+// _____________________________________________________________________ //
+// *--------------------------- Description ---------------------------* //
+
+/*
+  Responsible for fetching tweets from the server, converting them into elements
+  and inserting them into the dom.
+
+  Contains helper function to make any malicious user input inert.
+*/
+
+
+// _______________________________________________________________________ //
+// *----------------------------- Functions -----------------------------* //
 
 // Fetches tweets from server using AJAX
 const loadTweets = function() {
