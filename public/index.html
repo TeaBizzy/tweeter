@@ -44,6 +44,7 @@
       </div>
     </nav>
 
+    <!-- Button sends user to top of page -->
     <button id="to-top-button">
       <i class="fa-solid fa-angles-up"></i>
     </button>
@@ -55,27 +56,31 @@
       </div>
       <br>
       <div>
-        <h2>Your Name</h2>
+        <h2>Stefan Talbot</h2>
       </div>
     </header>
 
     <!-- Page-specific (main) content here -->
     <main class="container">
-      <h2>Compose Tweet</h2>
-      <div id="error-box">
-        <i class="fa-solid fa-triangle-exclamation"></i>
-        <h5>This is an Error!</h5>
-        <i class="fa-solid fa-triangle-exclamation"></i>
-      </div>
+
+      <!-- New tweet form -->
       <form class="new-tweet" action="/tweets/" method="POST">
+        <h2>Compose Tweet</h2>
+        <div id="error-box">
+          <i class="fa-solid fa-triangle-exclamation"></i>
+          <h5>This is an Error!</h5>
+          <i class="fa-solid fa-triangle-exclamation"></i>
+        </div>
         <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
         <div class="below-tweet">
           <button type="submit">Tweet</button>
-          <!-- TODO: Move this above the new tweet, make it slide up and down, add icons, and a red border. -->
           <output name="counter" class="counter" for="tweet-text">140</output>
         </div>
       </form>
+
+      <!-- Container for tweets -->
       <div id="tweet-container"></div>
+
     </main>
   </body>
 </html>
