@@ -3,7 +3,7 @@
 
 /*
   Responsible for sending user tweet input to the server using AJAX
-.*/
+*/
 
 
 // _______________________________________________________________________ //
@@ -24,23 +24,21 @@ const submitTweet = function(event) {
   
   // Handle invalid inputs & display errors
   if (tweetContent.length > 140) {
-    errorBox.slideToggle(500);
+    errorBox.slideDown(500);
     errorMessage.text('Tweet too long!');
-    errorBox.show();
     return;
   }
 
   if (tweetContent.length <= 0) {
-    errorBox.slideToggle(500);
+    errorBox.slideDown(500);
     errorMessage.text('Tweet is empty!');
-    errorBox.show();
     return;
   }
   
   // Reset the form
   updateCounter();
   textarea.val('');
-  errorBox.hide();
+  errorBox.slideUp(500);
 
   // Send the tweet to the server using AJAX
   $.post('/tweets/', text)
