@@ -34,7 +34,7 @@ const renderTweets = function(tweets) {
 const createTweetElement = function(tweetData) {
   // Declare variables
   const user = tweetData.user;
-  const content = tweetData.content.text;
+  let content = tweetData.content.text;
   content = escapeInput(content);
 
   // create tweet element
@@ -74,6 +74,6 @@ const createTweetElement = function(tweetData) {
 const escapeInput = function(str) {
   let div = document.createElement("div");
   div.appendChild(document.createTextNode(str));
-  
+
   return div.innerHTML;
 };
