@@ -1,17 +1,12 @@
 // _______________________________________________________________________ //
-// *----------------------------- Constants -----------------------------* //
-
-const counter = $('.new-tweet').find('.counter');
-
-
-// _______________________________________________________________________ //
 // *----------------------------- Functions -----------------------------* //
 
 // Updates the text of the counter to show the remaining string length
 const updateCounter = function(length = 0) {
+  const counter = $('.new-tweet').find('.counter');
   const maxCharCount = 140;
   const remainingLength = maxCharCount - length;
-
+  
   // Update counter
   counter.text(remainingLength);
 
