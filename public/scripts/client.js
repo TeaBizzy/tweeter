@@ -64,27 +64,31 @@ const registerEvents = function() {
     const textarea = $(this).find('textarea');
     const tweetContent = textarea.val();
 
-    const errorMessage = $('.error');
+    const errorBox = $('#error-box');
+    const errorMessage = errorBox.find('h5');
     if (typeof tweetContent !== 'string') {
+      errorBox.slideToggle(500)
       errorMessage.text('No tweet message!');
-      errorMessage.show();
+      errorBox.show();
       return;
     }
 
     if (tweetContent.length > 140) {
+      errorBox.slideToggle(500)
       errorMessage.text('Tweet too long!');
-      errorMessage.show();
+      errorBox.show();
       return;
     }
 
     if (tweetContent.length <= 0) {
+      errorBox.slideToggle(500)
       errorMessage.text('Tweet is empty!');
-      errorMessage.show();
+      errorBox.show();
       return;
     }
     
     $(this).trigger('success');
-    errorMessage.hide();
+    errorBox.hide();
     textarea.val('');
     $.post('/tweets/', text)
     .then(() => {
@@ -120,8 +124,8 @@ const safeInput = function (str) {
 
 // Wait for the document to be 'ready'
 $(document).ready(() => {
-  $('.error').hide();
+  $('#error-box').slideToggle(0);
+  $('#to-top-button').hide();
   registerEvents();
   loadTweets();
-  $('#to-top-button').hide();
 });

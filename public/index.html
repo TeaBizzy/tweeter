@@ -59,12 +59,16 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <h2>Compose Tweet</h2>
+      <div id="error-box">
+        <i class="fa-solid fa-triangle-exclamation"></i>
+        <h5>This is an Error!</h5>
+        <i class="fa-solid fa-triangle-exclamation"></i>
+      </div>
       <form class="new-tweet" action="/tweets/" method="POST">
         <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
         <div class="below-tweet">
           <button type="submit">Tweet</button>
           <!-- TODO: Move this above the new tweet, make it slide up and down, add icons, and a red border. -->
-          <h5 class="error">This is an Error!</h5>
           <output name="counter" class="counter" for="tweet-text">140</output>
         </div>
       </form>

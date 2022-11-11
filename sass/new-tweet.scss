@@ -27,10 +27,13 @@ textarea {
   font-family: constants.$font-bungee;
 }
 
-.error {
+#error-box {
+  padding: 1em;
+  border: 4px solid constants.$error-color;
   font-family: constants.$font-source-sans-pro;
   font-weight: bold;
   color: constants.$error-color;
+  margin-block: 1rem;
 }
 
 .below-tweet > button {
